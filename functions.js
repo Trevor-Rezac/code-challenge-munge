@@ -195,20 +195,23 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const vehicles = arr.filter(vehicle => vehicle.type === 'car');
+    return vehicles;
 }
 
 /*
 Output:
- [
+[
         { type: 'car', make: 'chevy', model: 'malibu' },
         { type: 'car', make: 'chevy', model: 'camero' },
-  ] ;
+] ;
 
 */
 
 export function getChevyCars(arr) {
-    return [];
+    const vehicles = arr.filter(vehicle => vehicle.type === 'car');
+    const chevyCars = vehicles.filter(vehicle => vehicle.make === 'Chevy');
+    return chevyCars;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
