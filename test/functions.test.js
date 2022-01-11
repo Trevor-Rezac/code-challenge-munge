@@ -33,7 +33,7 @@ const otherPets = [
 ];
 
 
-test('should return the animal with the matching name', (expect) => {
+skip('should return the animal with the matching name', (expect) => {
     const expected = { name: 'sassy', type: 'dog' };
     const actual = findByName('sassy', otherPets);
 

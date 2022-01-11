@@ -15,7 +15,8 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const pet = arr.filter(petName => petName.name === name);
+    return pet[0];
 }
 
 /*
@@ -27,7 +28,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const dog = arr.filter(pet => pet.type === 'dog');
+    return dog;
 }
 
 /*
@@ -36,7 +38,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogs = arr.filter(pet => pet.type === 'dog');
+    const names = dogs.map(dog => dog.name);
+    return names;
 }
 
 
@@ -47,7 +51,8 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const names = arr.map(pet => pet.name);
+    return names;
 }
 
 /*
@@ -57,7 +62,9 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const petTypes = arr.map(pet => pet.type);
+    const reverseArr = petTypes.reverse(pet => pet.type);
+    return reverseArr;
 }
 
 /*
@@ -72,7 +79,12 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanishArr = arr.map(pet => ({
+        nombre: pet.name,
+        tipo: pet.type,
+    }));
+
+    return spanishArr;
 }
 
 /*
@@ -86,7 +98,12 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const isHungryArr = arr.map(pet => ({
+        name: pet.name,
+        isHungry: true,
+        type: pet.type,
+    }));
+    return isHungryArr;
 }
 
 /*
@@ -100,7 +117,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shoutingArr = arr.map(pet => ({
+        name: pet.name.toUpperCase(),
+        type: pet.type,
+    }));
+    return shoutingArr;
 }
 
 
@@ -111,7 +132,8 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const stringArr = arr.map(pet => (`${pet.name}${pet.type}`));
+    return stringArr;
 }
 
 /*
@@ -137,7 +159,14 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    const arrayArr = arr.map(pet => ([[
+        'name',
+        pet.name,
+    ], [
+        'type',
+        pet.type,
+    ]]));
+    return arrayArr;
 }
 
 ////////////////////////////////////////////////////////
